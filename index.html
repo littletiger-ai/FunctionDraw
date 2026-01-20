@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数绘图工具</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 引入 function-plot -->
+    <script src="https://unpkg.com/function-plot/dist/function-plot.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>函数绘图工具</h1>
+        
+        <div class="controls">
+            <div id="functions-list">
+                <!-- 函数输入行将通过 JS 动态生成 -->
+            </div>
+            
+            <button id="add-func-btn" class="secondary-btn" title="添加新函数">+ 添加函数</button>
+            
+            <div class="range-controls">
+                <div class="input-group">
+                    <label>X轴范围:</label>
+                    <input type="number" id="x-min" value="-10">
+                    <span>至</span>
+                    <input type="number" id="x-max" value="10">
+                </div>
+                
+                <div class="input-group">
+                    <label>Y轴范围:</label>
+                    <input type="number" id="y-min" value="-5">
+                    <span>至</span>
+                    <input type="number" id="y-max" value="5">
+                </div>
+            </div>
+
+            <button id="draw-btn">绘制图像</button>
+        </div>
+
+        <div class="canvas-container">
+            <div id="functionChart"></div>
+        </div>
+        
+        <div class="instructions">
+            <h3>使用说明:</h3>
+            <ul>
+                <li>支持显函数输入: <code>sin(x)</code>, <code>x^2</code></li>
+                <li>支持隐函数方程: <code>x^2 + y^2 = 9</code>, <code>x^2 - y^2 = 1</code></li>
+                <li>支持简写输入: <code>sin2x</code>, <code>ln(x)</code></li>
+                <li>调整 X 轴和 Y 轴的范围来查看不同区域的图像</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js?v=2"></script>
+</body>
+</html>

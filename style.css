@@ -1,0 +1,182 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+.controls {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #e9ecef;
+}
+
+#functions-list {
+    margin-bottom: 15px;
+}
+
+.function-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.function-row label {
+    font-weight: 600;
+    min-width: 40px; /* 缩短label宽度 */
+}
+
+.function-row input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.function-row input[type="color"] {
+    width: 40px;
+    height: 40px;
+    border: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.remove-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px; /* 改为方形圆角 */
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+    flex-shrink: 0; /* 防止被压缩 */
+}
+
+.remove-btn:hover {
+    background-color: #c0392b;
+}
+
+.secondary-btn {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.secondary-btn:hover {
+    background-color: #27ae60;
+}
+
+.range-controls {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    padding-top: 15px;
+    border-top: 1px solid #dee2e6;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.input-group label {
+    font-weight: 600;
+    min-width: 80px;
+}
+
+input[type="number"] {
+    padding: 8px;
+    width: 80px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+#draw-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#draw-btn:hover {
+    background-color: #2980b9;
+}
+
+.canvas-container {
+    position: relative;
+    /* height: 500px; function-plot 会自动控制高度 */
+    width: 100%;
+    margin-top: 20px;
+}
+
+.instructions {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #e8f4fd;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+}
+
+.instructions h3 {
+    margin-top: 0;
+    font-size: 16px;
+}
+
+.instructions ul {
+    margin-bottom: 0;
+    padding-left: 20px;
+}
+
+.instructions li {
+    margin-bottom: 5px;
+}
+
+code {
+    background-color: #fff;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-family: monospace;
+    color: #e74c3c;
+}
